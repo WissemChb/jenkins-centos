@@ -8,7 +8,7 @@ USER root
 #Install Jenkins Prequisites
 RUN yum update -y && \
     yum groupinstall -y 'development tools' && \
-    yum  install -y python-devel make gcc java-1.8.0-openjdk java-1.8.0-openjdk-devel epel-release wget
+    yum  install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel epel-release wget
 
 
 #Install Jenkins
