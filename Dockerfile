@@ -53,14 +53,14 @@ ENV COPY_REFERENCE_FILE_LOG $JENKINS_HOME/copy_reference_file.log
 
 COPY jenkins-support /usr/local/bin/jenkins-support
 COPY jenkins.sh /usr/local/bin/jenkins.sh
-
+COPY install-plugins.sh /usr/local/bin/install-plugins.sh
+COPY plugins.sh /usr/local/bin/plugins.sh
 # add permissions
 RUN chmod +x -R /usr/local/bin/
 
 ENTRYPOINT [ "/bin/tini","--","/usr/local/bin/jenkins.sh" ]
 
-COPY install-plugins.sh /usr/local/bin/install-plugins.sh
-COPY plugins.sh /usr/local/bin/plugins.sh
+
 
 
 
