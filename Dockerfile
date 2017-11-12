@@ -34,7 +34,7 @@ RUN mkdir -p /usr/share/jenkins/ref/init.groovy.d
 
 #Install Jenkins
 RUN wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo && \
-    rpm --import http://pkg.jenkins-ci.org/resdhat-stable/jenkins-ci.org.key && \
+    rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key && \
     yum install -y jenkins
 
 ENV JENKINS_UC https://updates.jenkins.io
